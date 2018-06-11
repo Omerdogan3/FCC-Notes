@@ -1,0 +1,130 @@
+
+1) How to protect object from mutation?
+As seen in previous challenge, const declaration alone
+doesn't really protect your data from mutation. 
+To ensure your data doesn't change, JavaScript provides a function Object.
+freeze to prevent data mutation.
+
+2) How to define variable in CSS?
+--penguin-skin: gray;
+background: var(--penguin-skin, black);
+black: Fallback value
+
+3) How to define global variable in CSS?
+define inside of the :root class
+
+
+
+Applied Visual Design
+
+1) text-align
+
+text-align: justify; causes all lines of text except the last line 
+to meet the left and right edges of the line box.
+
+2) Underline Text
+
+For CSS
+text-decoration: underline;
+Or 
+Wrap the u tag around
+
+3) Transform text in CSS
+
+The text-transform property in CSS is used to change the appearance of text. It's a convenient way to make
+sure text on a webpage appears consistently, without having to change the text content of the actual HTML elements.
+
+The following table shows how the different text-transformvalues change the example text "Transform me".
+
+Value	Result
+lowercase	"transform me"
+uppercase	"TRANSFORM ME"
+capitalize	"Transform Me"
+initial	Use the default value
+inherit	Use the text-transform value from the parent element
+none	Default: Use the original text
+
+4) How to scale an element with CSS?
+
+p {
+transform:scale(2);
+}
+
+
+
+5) Scroll down on a specific place when hit keyboard button?
+
+<button accesskey="b">Important Button</button>
+
+Use tabindex to Add Keyboard Focus to an Element
+<div tabindex="0">I need keyboard focus!</div>
+
+6) Responsive Web Design Principles: Make Typography Responsive
+Instead of using em or px to size text, you can use viewport units for responsive typography. 
+Viewport units, like percentages, are relative units, but they are based off different items. 
+Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element.
+
+The four different viewport units are:
+
+vw: 10vw would be 10% of the viewport's width.
+vh: 3vh would be 3% of the viewport's height.
+vmin: 70vmin would be 70% of the viewport's smaller dimension (height vs. width).
+vmax: 100vmax would be 100% of the viewport's bigger dimension (height vs. width).
+
+7) Check if an Object has a Property
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+  // change code below this line
+  return obj.hasOwnProperty("Alan", "Jeff", "Sarah", "Ryan");
+  // change code above this line
+}
+
+console.log(isEveryoneHere(users));
+
+8) Generate an Array of All Object Keys
+
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  // change code below this line
+return Object.keys(obj);
+  // change code above this line
+}
+
+console.log(getArrayOfUsers(users));
