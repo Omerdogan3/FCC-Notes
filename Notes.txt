@@ -138,3 +138,21 @@ function House(numBedrooms) {
 
 let myHouse = new House(3);
 myHouse instanceof House;
+
+
+11)	Reduce Method To Analyze Data
+
+This is not the case with the filter and map methods since they do not allow interaction
+between two different elements of the array. 
+For example, if you want to compare elements of the array, or add them together, 
+filter or map could not process that.
+
+The reduce method allows for more general forms of array processing, 
+and it's possible to show that both filter and map can be derived as 
+a special application of reduce.
+
+let sumRating = watchList.reduce((sum, value) => {
+  return sum + Number(value.imdbRating);
+}, 0);
+
+var averageRating = sumRating / watchList.length;
